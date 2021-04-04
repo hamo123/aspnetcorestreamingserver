@@ -32,6 +32,15 @@ namespace aspnetcorestreamingserver
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "aspnetcorestreamingserver", Version = "v1" });
             });
+
+            services.AddCors(o => o.AddPolicy("MyCORSPolicy", builder =>
+            {
+                //Should be restricted to where it can be called from for security
+                //Turn this into a config setting/*WithOrigins("")
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
