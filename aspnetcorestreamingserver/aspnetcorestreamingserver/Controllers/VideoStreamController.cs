@@ -13,11 +13,11 @@ namespace aspnetcorestreamingserver.Controllers
     [EnableCors("MyCORSPolicy")]
     public class VideoStreamController : ControllerBase
     {
-        [HttpPost]
+        [HttpGet]
         [Route("GetFile")]
         public FileResult GetFile()
         {
-            return PhysicalFile("~/Files/Sample_Video.mp4", "application/octet-stream", enableRangeProcessing: true);
+            return PhysicalFile("C:\\x\\Sample_Video.mp4", "application/octet-stream", enableRangeProcessing: true);
         }
 
     }

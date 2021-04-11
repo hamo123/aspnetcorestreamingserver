@@ -57,6 +57,8 @@ namespace aspnetcorestreamingserver
 
             app.UseRouting();
 
+            app.UseCors("MyCORSPolicy");
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
