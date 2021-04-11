@@ -1,6 +1,6 @@
 # ASP.NET Core 5.0 video streaming server
 
-**Introduction **
+**Introduction**
 
 This project is just a small prototype to demonstrate how ASP.NET Core could be used as a streaming server. 
 
